@@ -1,0 +1,48 @@
+{% load i18n parler_tags %}
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4 footer-contact">
+            <h3>Boutique ELPA</h3>
+            <p>
+              {{info.address}}<br>
+
+              Tashkent, Uzbekistan 
+            </p>
+          </div>
+          
+          <div class="col-md-4">
+            <h3>{% translate 'Contact' %}</h3>
+            <strong>Phone:</strong>{{ info.phone }}<br>
+            <strong>Email:</strong> {{ info.email }}<br>
+          </div>
+
+          <div class="col-md-4 footer-links">
+            <div class="social-links mt-3">
+                {% if info.telegram %}
+                <a href="{{info.telegram}}" class="twitter" target="_blank"><i class="bx bxl-telegram"></i></a>
+                {% endif %}
+                {% if info.facebook %}
+                <a href="{{info.facebook}}" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                {% endif %}
+                {% if info.instagram %}
+                <a href="{{info.instagram}}" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                {% endif %}
+
+
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>

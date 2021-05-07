@@ -1,0 +1,287 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-05 06:53+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\base\admin.py:21 .\base\admin.py:34 .\base\admin.py:48 .\base\admin.py:62
+#: .\base\admin.py:76
+msgid "Multilangual informations"
+msgstr ""
+
+#: .\base\forms.py:9
+#, fuzzy
+#| msgid "Send Message"
+msgid "message"
+msgstr "Xabar Yuborish"
+
+#: .\base\forms.py:10
+msgid "subject"
+msgstr ""
+
+#: .\base\forms.py:11
+msgid "phone"
+msgstr ""
+
+#: .\base\forms.py:12 .\base\models.py:95
+msgid "name"
+msgstr "ism"
+
+#: .\base\models.py:18
+#, fuzzy
+#| msgid "Our Address"
+msgid "address"
+msgstr "Manzilimiz"
+
+#: .\base\models.py:21
+msgid "phone number"
+msgstr "telefon raqam"
+
+#: .\base\models.py:24 .\base\models.py:25 .\base\models.py:26
+#: .\base\models.py:82
+msgid "this field have to incleude 'http://' or 'https://'"
+msgstr ""
+
+#: .\base\models.py:29
+msgid "Info"
+msgstr "ma'lumot"
+
+#: .\base\models.py:32 .\base\models.py:35
+#, fuzzy
+#| msgid "Product Information"
+msgid "Shop Information"
+msgstr "Mahsulot Haqida Ma'lumot"
+
+#: .\base\models.py:39
+msgid "you can not have more than one info object"
+msgstr "bittadan ko'p info kiritish mumkin emas"
+
+#: .\base\models.py:46
+#, fuzzy
+#| msgid "Category"
+msgid "category name"
+msgstr "Kategoriya"
+
+#: .\base\models.py:49
+#, fuzzy
+#| msgid "Category"
+msgid "category image"
+msgstr "Kategoriya"
+
+#: .\base\models.py:52
+#, fuzzy
+#| msgid "Category"
+msgid "categories"
+msgstr "Kategoriya"
+
+#: .\base\models.py:64 .\base\models.py:105
+#, fuzzy
+#| msgid "Collection"
+msgid "collection"
+msgstr "Kolleksiya"
+
+#: .\base\models.py:65
+msgid "blog text"
+msgstr "blog matni"
+
+#: .\base\models.py:67
+#, fuzzy
+#| msgid "Collection"
+msgid "collection image"
+msgstr "Kolleksiya"
+
+#: .\base\models.py:79 .\base\models.py:102
+#, fuzzy
+#| msgid "Brand"
+msgid "brand"
+msgstr "Tovar belgisi"
+
+#: .\base\models.py:81
+msgid "brand image"
+msgstr "brend rasmi"
+
+#: .\base\models.py:96
+msgid "description"
+msgstr "tavsif"
+
+#: .\base\models.py:97
+#, fuzzy
+#| msgid "Price"
+msgid "prices"
+msgstr "Narxi"
+
+#: .\base\models.py:100
+#, fuzzy
+#| msgid "Price"
+msgid "price"
+msgstr "Narxi"
+
+#: .\base\models.py:101
+#, fuzzy
+#| msgid "Category"
+msgid "category"
+msgstr "Kategoriya"
+
+#: .\base\models.py:103
+msgid "new"
+msgstr "yangi"
+
+#: .\base\models.py:104
+msgid "top"
+msgstr ""
+
+#: .\base\models.py:128 .\base\models.py:138
+msgid "alternative message"
+msgstr "tavsif"
+
+#: .\base\templates\base\collection_products.html:5
+#: .\base\templates\base\product.html:4 .\base\templates\base\products.html:5
+msgid "Products"
+msgstr "Mahsulotlar"
+
+#: .\base\templates\base\contact.html:4 .\base\templates\base\contact.html:15
+#: .\templates\nav.html:58
+msgid "Contact"
+msgstr "Aloqa"
+
+#: .\base\templates\base\contact.html:16
+msgid "If you have any suggestions, feel free to contact us."
+msgstr "Agar biron-bir taklifingiz bo'lsa,bizga murojaat qiling."
+
+#: .\base\templates\base\contact.html:23
+msgid "Our Address"
+msgstr "Manzilimiz"
+
+#: .\base\templates\base\contact.html:31
+msgid "Email Us"
+msgstr "Bizning Elektron Pochta"
+
+#: .\base\templates\base\contact.html:39
+msgid "Call Us"
+msgstr "Bizning Telefon"
+
+#: .\base\templates\base\contact.html:77
+msgid "Your message has been sent. Thank you!"
+msgstr "Sizning xabaringiz yuborilgan. Raxmat!"
+
+#: .\base\templates\base\contact.html:80
+msgid "Send Message"
+msgstr "Xabar Yuborish"
+
+#: .\base\templates\base\index.html:14
+msgid "best choise for classic clothes"
+msgstr "klassik kiyim uchun eng yaxshi tanlov"
+
+#: .\base\templates\base\index.html:131
+msgid "our shop"
+msgstr "bizning do'kon"
+
+#: .\base\templates\base\index.html:132
+msgid "look-up our market"
+msgstr "bizning do'kon"
+
+#: .\base\templates\base\index.html:139
+msgid "your browser does not support this type of video"
+msgstr ""
+"Bu video sizning brauzeringizga mos emas. Iltimos boshqa brauzer bilan "
+"urinib ko'ring."
+
+#: .\base\templates\base\index.html:149 .\base\templates\base\newsletter.html:5
+#: .\templates\nav.html:50
+msgid "Collections"
+msgstr "Kolleksiyalar"
+
+#: .\base\templates\base\index.html:150
+msgid "We have new collections in every season"
+msgstr "Bizda har faslda yangi kolleksiyalar"
+
+#: .\base\templates\base\index.html:181
+msgid "Gallery"
+msgstr "Galeriya"
+
+#: .\base\templates\base\index.html:182
+msgid "Some photos from Our boutique"
+msgstr "Butikimizdan ba'zi rasmlar"
+
+#: .\base\templates\base\product.html:17 .\templates\nav.html:36
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\base\templates\base\product.html:18
+msgid "product page"
+msgstr "mahsulot sahifasi"
+
+#: .\base\templates\base\product.html:20
+#, python-format
+msgid "%(product.name_uz.upper)s Details "
+msgstr "Batafsil %(product.name_uz.upper)s"
+
+#: .\base\templates\base\product.html:53
+msgid "Product Information"
+msgstr "Mahsulot Haqida Ma'lumot"
+
+#: .\base\templates\base\product.html:55
+msgid "Name"
+msgstr "Ism"
+
+#: .\base\templates\base\product.html:56
+msgid "Category"
+msgstr "Kategoriya"
+
+#: .\base\templates\base\product.html:57
+msgid "Brand"
+msgstr "Tovar belgisi"
+
+#: .\base\templates\base\product.html:58
+msgid "Collection"
+msgstr "Kolleksiya"
+
+#: .\base\templates\base\product.html:62
+msgid "Date added"
+msgstr "Sana"
+
+#: .\base\templates\base\product.html:69
+msgid "Pricing"
+msgstr "Narxlar"
+
+#: .\base\templates\base\product.html:71
+msgid "Price"
+msgstr "Narxi"
+
+#: .\base\templates\base\product.html:80
+msgid "More Detail"
+msgstr "Batafsil Ma'lumot"
+
+#: .\base\templates\base\product.html:95
+msgid "More recommendations"
+msgstr "Siz uchun..."
+
+#: .\config\settings.py:159
+msgid "English"
+msgstr "Ingliz tili"
+
+#: .\config\settings.py:160
+msgid "Russian"
+msgstr "Rus tili"
+
+#: .\config\settings.py:161
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: .\templates\nav.html:40
+msgid "All products"
+msgstr "Barcha mahsulotlar"

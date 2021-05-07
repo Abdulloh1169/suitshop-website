@@ -1,0 +1,60 @@
+  {% load static %}
+  {% load i18n %}
+
+
+  <div class="container-fluid big-logo" id="big-logo">
+    <div class="row big-into">
+      <div class="col text-center my-1">
+        <a href="{% url 'home' %}">
+        <img src="{% static 'img/logo.png' %}" alt="logo" style="max-height:60px;">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+      <nav id="navbar" class="navbar d-flex align-items-center">
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        <ul class="main-nav">
+          <li><a class="nav-link scrollto {% if current == 'home' %}active{% endif %}" href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+
+          <li class="dropdown scrollto">
+            <a href="{% url 'products' %}" class="{% if current == 'portfolio' %}active{% endif %}" href="{% url 'products' %}">
+              <span>{% translate 'All products' %}</span> <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul>
+              {% for i in categories %}
+                <li><a href="{% url 'products' %}?category={{i}}" class="nav-link"><span>{{i}}</span></a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="dropdown scrollto">
+            <a href="{% url 'collections' %}" class="{% if current == 'collection' %}active{% endif %}" href="{% url 'products' %}">
+              <span>{% translate 'Collections' %}</span> <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul>
+              {% for i in collections %}
+                <li><a href="{% url 'collection_products' i.id%}" class="nav-link"><span>{{i}}</span></a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto {% if current == 'contact' %}active{% endif %}" href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
+        </ul>
+
+        {% get_current_language as language_code %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        <div class="languages me-lg-4">
+          <ul>
+            {% for lang in languages %}
+            {% if language_code != lang.code %}
+              <li><a href="/{{ lang.code }}{{path}}">{{lang.code}}</a></li>
+            {% else %}
+              <li>{{lang.code}}</li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </nav><!-- .navbar -->
+  </header><!-- End Header -->

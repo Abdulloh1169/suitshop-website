@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n parler_tags %}
+
+{% block title %}{% translate 'Collections' %}{% endblock title %}
+
+{% block body %}
+{% include 'nav.html'  with current="collections" %}
+<section id="collections" class="collections">
+	<div class="container-fluid">
+		<div class="row d-flex justify-content-center">
+
+			{% for collection in session %}
+			<div class="col-md-6">
+				<a href="{% url 'collection_products' collection.id %}">
+
+					<div class="card mb-3 d-flex">
+					  <img src="{{collection.image.url}}" class="card-img-top" alt="image for {{collection.name}}">
+					  <div class="card-body">
+					    <h5 class="card-title text-center b-400">{{collection.name}}</h5>
+					    <p class="card-text">{{collection.blog_text}}</p>
+					  </div>
+					</div>
+
+				</a>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+
+</section>
+
+
+
+{% endblock body %}

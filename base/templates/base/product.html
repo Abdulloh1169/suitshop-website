@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load i18n parler_tags %}
+
+{% block title %}{{product.name}}-{% translate 'Products' %}{% endblock title %}
+
+{% block body %}
+
+{% include 'nav.html' with current="product" %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+          <li>{% translate 'product page' %}</li>
+        </ol>
+        <h2>{% blocktranslate %}{{product.name_uz.upper}} Details {% endblocktranslate %}</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="single-products" class="single-products">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="single-products-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+                {%for i in product.image_set.all %}
+                  <div class="swiper-slide">
+                    <img src="{{i.image.url}}" alt="">
+                  </div>      
+                {% endfor %}
+                              
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row d-flex">
+              <div class="col-lg-6">
+                <div class="portfolio-info m-lg-0 m-1">
+                  <h3>{% translate 'Product Information' %}:</h3>
+                  <ul>
+                    <li><strong>{% translate 'Name' %}</strong>: {{product.name}}</li>
+                    <li><strong>{% translate 'Category' %}</strong>: {{product.category}}</li>
+                    <li><strong>{% translate 'Brand' %}</strong>: <a href="{{product.brand.link|default:''}}">{{product.brand|default:''}}</a></li>
+                    <li><strong>{% translate 'Collection' %}</strong>: 
+                      {% if product.collection %}
+                        <a href="{% url 'collection_products' product.collection.id %}">{{product.collection}}</a>
+                      {% endif %}
+                    <li><strong>{% translate 'Date added' %}</strong>: {{product.date_changed|date:"d.m.Y"}}</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="portfolio-info m-lg-0 m-1">
+                  <h3>{% translate 'Pricing' %}:</h3>
+                  <ul>
+                    <li><strong>{% translate 'Price' %}</strong>: {{product.price}}</li>
+                    {% for i, j in product.get_prices %}
+                    <li><strong>{{i}}</strong>: {{j}}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description">
+              <h2>{% translate 'More Detail' %}</h2>
+              <p>
+                {{product.description|default:"No descriptions"}}  
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>{% translate 'More recommendations' %}</h2>
+        </div>
+
+        <div class="row">
+          {% for product in recommendations %}
+              <div class="col-lg-3 col-sm-4 col-6 d-flex p-0" data-aos-delay="150" data-aos="fade-up">
+                <div class="portfolio-card m-1">
+                  <a href="{% url 'product' product.id %}" class="link"> 
+                  <div class="image-box">
+                    <img src="{{product.image_set.first.image.url}}" class="img-top" alt="">
+                    <img src="{{product.image_set.last.image.url}}"  class="img-hidden" alt="">
+                    <div class="sale">
+                        {% if product.collection %}
+                          {{product.collection.name}}
+                        {% elif product.is_top %}
+                          top
+                        {% elif product.is_new %}
+                          new
+                        {% endif %}
+                    </div>
+                  </div>
+                  <div class="body-wrapper">
+                    <p><span>{{product.name}}</span>:{{product.price}}&nbsp;UZS</p>
+                    {% for i, j in product.get_prices %}
+                    <strong>{{i}}</strong>:{{j}}&nbsp;UZS<br>
+                    {% endfor %}
+                  </div>
+
+                  </a>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+
+{% endblock body %}

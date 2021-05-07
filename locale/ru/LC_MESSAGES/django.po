@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-05 06:53+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\base\admin.py:21 .\base\admin.py:34 .\base\admin.py:48 .\base\admin.py:62
+#: .\base\admin.py:76
+msgid "Multilangual informations"
+msgstr "Многоязычная информация"
+
+#: .\base\forms.py:9
+#, fuzzy
+#| msgid "Send Message"
+msgid "message"
+msgstr "отправить сообщение"
+
+#: .\base\forms.py:10
+msgid "subject"
+msgstr ""
+
+#: .\base\forms.py:11
+msgid "phone"
+msgstr ""
+
+#: .\base\forms.py:12 .\base\models.py:95
+msgid "name"
+msgstr "имя"
+
+#: .\base\models.py:18
+#, fuzzy
+#| msgid "Our Address"
+msgid "address"
+msgstr "Наш Адрес"
+
+#: .\base\models.py:21
+msgid "phone number"
+msgstr "номер телефона"
+
+#: .\base\models.py:24 .\base\models.py:25 .\base\models.py:26
+#: .\base\models.py:82
+msgid "this field have to incleude 'http://' or 'https://'"
+msgstr "это поле должно содержать 'http://' или 'https://'."
+
+#: .\base\models.py:29
+msgid "Info"
+msgstr "Инфо"
+
+#: .\base\models.py:32 .\base\models.py:35
+#, fuzzy
+#| msgid "Product Information"
+msgid "Shop Information"
+msgstr "Информация о продукте"
+
+#: .\base\models.py:39
+msgid "you can not have more than one info object"
+msgstr "у вас не может быть более одного информационного объекта"
+
+#: .\base\models.py:46
+#, fuzzy
+#| msgid "Category"
+msgid "category name"
+msgstr "Категория"
+
+#: .\base\models.py:49
+#, fuzzy
+#| msgid "Category"
+msgid "category image"
+msgstr "Категория"
+
+#: .\base\models.py:52
+#, fuzzy
+#| msgid "Category"
+msgid "categories"
+msgstr "Категория"
+
+#: .\base\models.py:64 .\base\models.py:105
+#, fuzzy
+#| msgid "Collection"
+msgid "collection"
+msgstr "Коллекция"
+
+#: .\base\models.py:65
+msgid "blog text"
+msgstr "текст блога"
+
+#: .\base\models.py:67
+#, fuzzy
+#| msgid "Collection"
+msgid "collection image"
+msgstr "Коллекция"
+
+#: .\base\models.py:79 .\base\models.py:102
+#, fuzzy
+#| msgid "Brand"
+msgid "brand"
+msgstr "Бренд"
+
+#: .\base\models.py:81
+msgid "brand image"
+msgstr "изображение бренда"
+
+#: .\base\models.py:96
+msgid "description"
+msgstr "описание"
+
+#: .\base\models.py:97
+#, fuzzy
+#| msgid "Price"
+msgid "prices"
+msgstr "Цена"
+
+#: .\base\models.py:100
+#, fuzzy
+#| msgid "Price"
+msgid "price"
+msgstr "Цена"
+
+#: .\base\models.py:101
+#, fuzzy
+#| msgid "Category"
+msgid "category"
+msgstr "Категория"
+
+#: .\base\models.py:103
+msgid "new"
+msgstr "новый"
+
+#: .\base\models.py:104
+msgid "top"
+msgstr ""
+
+#: .\base\models.py:128 .\base\models.py:138
+msgid "alternative message"
+msgstr "tafsif"
+
+#: .\base\templates\base\collection_products.html:5
+#: .\base\templates\base\product.html:4 .\base\templates\base\products.html:5
+msgid "Products"
+msgstr "Продукты"
+
+#: .\base\templates\base\contact.html:4 .\base\templates\base\contact.html:15
+#: .\templates\nav.html:58
+msgid "Contact"
+msgstr "Контакт"
+
+#: .\base\templates\base\contact.html:16
+msgid "If you have any suggestions, feel free to contact us."
+msgstr ""
+"Если у вас есть какие-либо предложения, не стесняйтесь обращаться к нам."
+
+#: .\base\templates\base\contact.html:23
+msgid "Our Address"
+msgstr "Наш Адрес"
+
+#: .\base\templates\base\contact.html:31
+msgid "Email Us"
+msgstr "Наша Электронная почта"
+
+#: .\base\templates\base\contact.html:39
+msgid "Call Us"
+msgstr "Наш телефон"
+
+#: .\base\templates\base\contact.html:77
+msgid "Your message has been sent. Thank you!"
+msgstr "Ваше сообщение было отправлено. Спасибо!"
+
+#: .\base\templates\base\contact.html:80
+msgid "Send Message"
+msgstr "отправить сообщение"
+
+#: .\base\templates\base\index.html:14
+msgid "best choise for classic clothes"
+msgstr "лучший выбор для классической одежды"
+
+#: .\base\templates\base\index.html:131
+msgid "our shop"
+msgstr "наш магазин"
+
+#: .\base\templates\base\index.html:132
+msgid "look-up our market"
+msgstr "посмотрите наш магазин"
+
+#: .\base\templates\base\index.html:139
+msgid "your browser does not support this type of video"
+msgstr "ваш браузер не поддерживает этот тип видео"
+
+#: .\base\templates\base\index.html:149 .\base\templates\base\newsletter.html:5
+#: .\templates\nav.html:50
+msgid "Collections"
+msgstr "Коллекции"
+
+#: .\base\templates\base\index.html:150
+msgid "We have new collections in every season"
+msgstr ""
+
+#: .\base\templates\base\index.html:181
+msgid "Gallery"
+msgstr "Галерея"
+
+#: .\base\templates\base\index.html:182
+msgid "Some photos from Our boutique"
+msgstr "Несколько фотографий из нашего бутика"
+
+#: .\base\templates\base\product.html:17 .\templates\nav.html:36
+msgid "Home"
+msgstr "Домой"
+
+#: .\base\templates\base\product.html:18
+msgid "product page"
+msgstr "страница продукта"
+
+#: .\base\templates\base\product.html:20
+#, python-format
+msgid "%(product.name_uz.upper)s Details "
+msgstr "детaли %(product.name_uz.upper)s "
+
+#: .\base\templates\base\product.html:53
+msgid "Product Information"
+msgstr "Информация о продукте"
+
+#: .\base\templates\base\product.html:55
+msgid "Name"
+msgstr "Имя"
+
+#: .\base\templates\base\product.html:56
+msgid "Category"
+msgstr "Категория"
+
+#: .\base\templates\base\product.html:57
+msgid "Brand"
+msgstr "Бренд"
+
+#: .\base\templates\base\product.html:58
+msgid "Collection"
+msgstr "Коллекция"
+
+#: .\base\templates\base\product.html:62
+msgid "Date added"
+msgstr "Дата"
+
+#: .\base\templates\base\product.html:69
+msgid "Pricing"
+msgstr "Ценообразование"
+
+#: .\base\templates\base\product.html:71
+msgid "Price"
+msgstr "Цена"
+
+#: .\base\templates\base\product.html:80
+msgid "More Detail"
+msgstr "Подробнее"
+
+#: .\base\templates\base\product.html:95
+msgid "More recommendations"
+msgstr "рекомендации для вас"
+
+#: .\config\settings.py:159
+msgid "English"
+msgstr "Английский"
+
+#: .\config\settings.py:160
+msgid "Russian"
+msgstr "Русский"
+
+#: .\config\settings.py:161
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: .\templates\nav.html:40
+msgid "All products"
+msgstr "Все продукты"

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n parler_tags %}
+
+{% block title %}{% translate 'Products' %}{% endblock title %}
+
+{% block body %}
+    {% include 'nav.html' with current="portfolio" %}
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container-fluid">
+  
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li {% if current_type == "all" %}class="filter-active"{% endif %}>
+                  <a href="{% url 'products' %}" style="color: inherit;">All</a>
+                </li>
+                {% for category in categories %}
+                  <li {% if current_type == category.name %}class="filter-active"{% endif %}>
+                    <a href="{% url 'products' %}?category={{category.name}}" style="color: inherit;">{{category.name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
+            {% for product in products %}
+            <div class="col-lg-3 col-6 d-flex p-0" data-aos-delay="150" data-aos="fade-up">
+            <div class="portfolio-card m-1">
+              <a href="{% url 'product' product.id %}" class="link"> 
+              <div class="image-box">
+                  <img src="{{product.image_set.first.image.url}}" class="img-top" alt="">
+                  <img src="{{product.image_set.last.image.url}}"  class="img-hidden" alt="">
+                  <div class="sale">
+                        {% if product.collection %}
+                          {{product.collection.name}}
+                        {% elif product.is_top %}
+                          top
+                        {% elif product.is_new %}
+                          new
+                        {% endif %}
+                    </div>
+              </div>
+                
+                <!--card body-->
+              <div class="body-wrapper">
+                <p><span>{{product.name}}</span>: {{product.price}}&nbsp;UZS</p>
+                {% for i, j in product.get_prices %}
+                <strong>{{i}}</strong>: {{j}}&nbsp;UZS<br>
+                {% endfor %}
+              </div>
+
+              </a>
+            </div>
+          </div>
+            {% endfor %}
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Section -->
+{% endblock body %}
+
+
+
+<!--
+{% comment %}
+{% static 'assets/img/portfolio/portfolio-9.jpg' %}
+{% static 'assets/img/portfolio/portfolio-8.jpg' %}
+{% static 'assets/img/portfolio/portfolio-7.jpg' %}
+{% static 'assets/img/portfolio/portfolio-5.jpg' %}
+{% static 'assets/img/portfolio/portfolio-4.jpg' %}
+{% static 'assets/img/portfolio/portfolio-2.jpg' %}
+{% endcomment %}
+-->
