@@ -828,6 +828,29 @@ section {
   }
 }
 
+
+/*-----------------------------------------------------------
+# Pagination
+-----------------------------------------------------------*/
+#pagination-wrapper{
+  margin-top: 3rem;
+}
+
+
+#pagination-wrapper a:hover{
+  background-color: #cda45e;
+  border-color: #cda45e;
+} 
+
+#pagination-wrapper .active a{
+  background-color: #cda45e;
+  border-color: #cda45e;
+} 
+
+
+
+
+
 /*-----------------------------------------------------------
 # Types section
 -------------------------------------------------------------*/

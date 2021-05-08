@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
+from django.core.paginator import Paginator
 from django.utils.translation import gettext as _
 from . import functions as func
 from . import forms, models
@@ -33,27 +34,40 @@ def index(request):
 
 # all products page
 def all_products(request):
-    key_for_category = "all"
     categories = models.Category.objects.all()
-
     products = models.Product.objects.all()
-    category = request.GET.get("category")
 
-    if category:
-        products = set(products.filter(category__translations__name=category))
-        key_for_category = category
+    paginator = Paginator(products, 100)
+    page = request.GET.get('page')
+    paged_products = paginator.get_page(page)
 
     context={
-        "current_type": key_for_category,
-        "products": products,
-        "categories": categories,
+        "products": paged_products,
     }
+
+    context["categories"] = categories
     context["collections"] = models.Collection.objects.all()
     context["path"] = get_path(request)
     context["info"] = models.Info.objects.first()
 
     return render(request, "base/products.html", context)
 
+
+def some_products(request, cat):
+    category = get_object_or_404(models.Category, id=cat)
+    products = models.Product.objects.filter(category=category)
+
+    pagination = Paginator(products, 100)
+    page = request.GET.get('page')
+    paged_products = pagination.get_page(page)
+
+    context = {"products": paged_products, "category": category}
+    context["categories"] = models.Category.objects.all()
+    context["collections"] = models.Collection.objects.all()
+    context["path"] = get_path(request)
+    context["info"] = models.Info.objects.first()
+
+    return render(request, "base/products.html", context)
 
 # single product
 def single_product(request, pk):
@@ -72,22 +86,46 @@ def single_product(request, pk):
 # products in spesific collection
 def collection_products(request, id):
     products = models.Product.objects.filter(collection__id=id)
-    category = request.GET.get("category")
-    categories = models.Category.objects.all()
     collection = models.Collection.objects.get(id=id)
 
-    if category:
-        products = set(products.filter(category__translations__name=category))
-        key_for_category = category
+    pagination = Paginator(products, 50)
+    page = request.GET.get('page')
+    paged_products = pagination.get_page(page)
+
     
     context = {
-        "categories": categories,
-        "key": category,
-        "products": products,
+        "products": paged_products,
         "collection": collection,
 
     }
 
+    context["categories"] = models.Category.objects.all()
+    context["collections"] = models.Collection.objects.all()
+    context["path"] = get_path(request)
+    context["info"] = models.Info.objects.first()
+
+    return render(request, "base/collection_products.html", context)
+
+
+def some_collection_products(request, id, cat):
+    products = models.Product.objects.filter(collection__id=id)
+    category = get_object_or_404(models.Category, id=cat)
+    products = models.Product.objects.filter(category=category)
+    collection = models.Collection.objects.get(id=id)
+
+    pagination = Paginator(products, 50)
+    page = request.GET.get('page')
+    paged_products = pagination.get_page(page)
+
+    
+    context = {
+        "category": category,
+        "products": paged_products,
+        "collection": collection,
+
+    }
+
+    context["categories"] = models.Category.objects.all()
     context["collections"] = models.Collection.objects.all()
     context["path"] = get_path(request)
     context["info"] = models.Info.objects.first()

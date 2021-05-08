@@ -32,7 +32,7 @@ class ProductAdmin(TranslatableAdmin, admin.ModelAdmin):
 
     fieldsets = (
     (None, {
-        'fields': ('price', 'category', 'brand', 'is_new', 'is_top', 'collection')
+        'fields': ('price', 'category', 'is_new', 'is_top', 'collection')
             }),
     
     (_('Multilangual informations'), {
