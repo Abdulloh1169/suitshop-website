@@ -16,7 +16,7 @@ class ProductImageInline(admin.TabularInline):
 class InfoAdmin(TranslatableAdmin):
     fieldsets = (
     (None, {
-        'fields': ('phone', 'instagram', 'telegram', 'facebook')
+        'fields': ('phone', 'instagram', 'telegram', 'facebook', 'email')
             }),
     (_('Multilangual informations'), {
         'fields': ('address',),

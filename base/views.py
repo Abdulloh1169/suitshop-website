@@ -54,7 +54,8 @@ def all_products(request):
 
 # products in special category
 def some_products(request, cat):
-    category = get_object_or_404(models.Category, id=cat)
+    category = get_object_or_404(models.Category, pk=cat)
+    print(category)
     products = models.Product.objects.filter(category=category).order_by("-date_changed")
 
     pagination = Paginator(products, 100)
@@ -111,7 +112,7 @@ def collection_products(request, id):
 def some_collection_products(request, id, cat):
     products = models.Product.objects.filter(collection__id=id)
     category = get_object_or_404(models.Category, id=cat)
-    products = models.Product.objects.filter(category=category).order_by("-date_changed")
+    products = products.filter(category=category).order_by("-date_changed")
     collection = models.Collection.objects.get(id=id)
 
     pagination = Paginator(products, 50)

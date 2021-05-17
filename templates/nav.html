@@ -26,7 +26,7 @@
             <ul>
               <li class="mobile-visible"><a class="nav-link" href="{% url 'products' %}">{% translate 'all' %}</a></li>
               {% for i in categories %}
-                <li><a href="{% url 'products' %}?category={{i}}" class="nav-link"><span>{{i}}</span></a></li>
+                <li><a href="{% url 'some_products' i.id %}" class="nav-link"><span>{{i}}</span></a></li>
               {% endfor %}
             </ul>
           </li>

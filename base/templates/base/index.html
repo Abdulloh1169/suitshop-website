@@ -23,7 +23,7 @@
 
 		{% for category in categories %}
 			<div class="col-md-3 col-6 m-0 p-0">
-				<a href="{% url 'products' %}?category={{category.name}}">
+				<a href="{% url 'some_products' category.id %}">
 				<div class="member" data-aos="zoom-in" data-aos-delay="100">
 					<img class="img-fluid" src="{{category.image.url}}">
 					<div class="member-info">
@@ -120,12 +120,12 @@
 		<div class="row">
 			<div class="col-12">
 				<video class="video-fluid z-depth-1" id="hidden-small" autoplay loop controls muted>
-					<source src="{% static 'shop_small.mov' %}" type="video/mp4">
+					<source src="{% static 'shop_small.mp4' %}" type="video/mp4">
   					<p>{% translate 'your browser does not support this type of video' %}</p>
 				</video>
 
 				<video class="video-fluid z-depth-1" id="hidden-big" autoplay loop controls muted>
-					<source src="{% static 'shop_normal.mov' %}" type="video/mp4">
+					<source src="{% static 'shop_big.mp4' %}" type="video/mp4">
   					<p>{% translate 'your browser does not support this type of video' %}</p>
 				</video>
 			</div>
@@ -144,9 +144,11 @@
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 		  	{% for event in collections %}
+			  <a href="{% url 'collections' %}">
 				<div class="carousel-item {% if event == collections.first %}active{% endif %}">
 					<div class="w-100 collection-item" style="background-image: url('/media/{{event.image}}');"></div>
 				</div>
+			  </a>
 			{% endfor %}
 		  </div>
 		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -178,7 +180,7 @@
 	<div class="row no-gutters">
 
 		{% for image in images %}
-			<div class="col-lg-3 col-md-4 col-2 p-0">
+			<div class="col-lg-3 col-md-4 col-6 p-0">
 				<div class="gallery-item">
 					<a href="{{image.image.url}}" class="venobox" data-gall="gallery-item">
 					<img src="{{image.image.url}}" alt="{{image.alt}}" class="img-fluid">

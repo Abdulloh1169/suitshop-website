@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Antonio', sans-serif;
   font-family: 'PT Sans', sans-serif;
   color: #000;
 }
@@ -820,7 +820,7 @@ section {
 }
 
 .portfolio .body-wrapper{
-  font-family: 'Antonio', sans-serif;
+  font-family: 'Antonio', 'Roboto Condensed', sans-serif;
   color: #999999; 
   margin: 5px;
   padding: 5px;
@@ -830,8 +830,11 @@ section {
   text-align: center;
 }
 
-.portfolio .body-wrapper span, .body-wrapper strong{
+.portfolio .body-wrapper span, .portfolio .body-wrapper strong{
   color: #1a000d;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .portfolio .body-wrapper span{
@@ -841,7 +844,6 @@ section {
 
 .portfolio .body-wrapper strong{
   font-size: 14px;
-  font-weight: 400;
 }
 
 @media(max-width: 414px){
