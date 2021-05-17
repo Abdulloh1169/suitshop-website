@@ -24,6 +24,7 @@
               <span>{% translate 'All products' %}</span> <i class="bi bi-chevron-down"></i>
             </a>
             <ul>
+              <li class="mobile-visible"><a class="nav-link" href="{% url 'products' %}">{% translate 'all' %}</a></li>
               {% for i in categories %}
                 <li><a href="{% url 'products' %}?category={{i}}" class="nav-link"><span>{{i}}</span></a></li>
               {% endfor %}
@@ -34,6 +35,7 @@
               <span>{% translate 'Collections' %}</span> <i class="bi bi-chevron-down"></i>
             </a>
             <ul>
+              <li class='mobile-visible'><a class="nav-link" href="{% url 'collections' %}">{% translate 'all' %}</a></li>
               {% for i in collections %}
                 <li><a href="{% url 'collection_products' i.id%}" class="nav-link"><span>{{i}}</span></a></li>
               {% endfor %}

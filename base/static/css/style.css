@@ -339,6 +339,10 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
+.mobile-visible{
+  display: none;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -370,6 +374,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .navbar ul.main-nav {
     display: none;
+  }
+  .mobile-visible{
+    display: block;
   }
 }
 
@@ -482,13 +489,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 56px;
   text-transform: uppercase;
-  color: #140530;
+  color: #fff;
+  text-align: center;
 }
 
 #hero h2 {
   color: #eee;
   margin-bottom: 30px;
   font-size: 24px;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -654,9 +663,25 @@ section {
 
 #about-us .video-fluid {
   width: 100%;
-  aspect-ratio: 16/9;
 }
 
+#hidden-big{
+  display: none;
+}
+
+#hidden-small{
+  display:block;
+}
+
+@media(max-width: 768px){
+  #hidden-small{
+    display:none;
+  }
+
+  #hidden-big{
+    display:block;
+  }
+}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -833,7 +858,7 @@ section {
 # Pagination
 -----------------------------------------------------------*/
 #pagination-wrapper{
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 

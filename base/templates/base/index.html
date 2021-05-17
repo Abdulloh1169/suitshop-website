@@ -119,8 +119,13 @@
 
 		<div class="row">
 			<div class="col-12">
-				<video class="video-fluid z-depth-1" autoplay loop controls muted>
-  					<source src="{% static 'advertising.mp4' %}" type="video/mp4" />
+				<video class="video-fluid z-depth-1" id="hidden-small" autoplay loop controls muted>
+					<source src="{% static 'shop_small.mov' %}" type="video/mp4">
+  					<p>{% translate 'your browser does not support this type of video' %}</p>
+				</video>
+
+				<video class="video-fluid z-depth-1" id="hidden-big" autoplay loop controls muted>
+					<source src="{% static 'shop_normal.mov' %}" type="video/mp4">
   					<p>{% translate 'your browser does not support this type of video' %}</p>
 				</video>
 			</div>
