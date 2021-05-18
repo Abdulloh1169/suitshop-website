@@ -144,11 +144,11 @@
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 		  	{% for event in collections %}
-			  <a href="{% url 'collections' %}">
 				<div class="carousel-item {% if event == collections.first %}active{% endif %}">
-					<div class="w-100 collection-item" style="background-image: url('/media/{{event.image}}');"></div>
+					<a href="{% url 'collections' %}">
+						<div class="w-100 collection-item" style="background-image: url('/media/{{event.image}}');"></div>
+					</a>
 				</div>
-			  </a>
 			{% endfor %}
 		  </div>
 		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

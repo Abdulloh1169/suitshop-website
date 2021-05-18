@@ -820,7 +820,8 @@ section {
 }
 
 .portfolio .body-wrapper{
-  font-family: 'Antonio', 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Antonio';
   color: #999999; 
   margin: 5px;
   padding: 5px;
